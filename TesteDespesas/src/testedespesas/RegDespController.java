@@ -10,5 +10,4 @@ class RegDespController {
         new Despesa(valor,descricao);
     }
     
-    
 }
