@@ -6,9 +6,13 @@ import java.util.Scanner;
 public class RegDespUI {
     
     public RegDespUI(){
-
-        new RegDespController().novaDespesa(valor(), descricao());
-        System.out.println("\nDespesa gravada com sucesso."); 
+        
+        boolean sucesso = new RegDespController().novaDespesa(valor(), descricao());
+        if(sucesso){
+            System.out.println("\nDespesa gravada com sucesso.\n");
+        }else{
+            System.out.println("\nERRO - A Despesa não foi gravada com sucesso.\n") ;
+        } 
     }
     
     Scanner ler = new Scanner (System.in);

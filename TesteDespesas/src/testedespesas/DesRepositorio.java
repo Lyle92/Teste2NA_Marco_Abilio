@@ -1,13 +1,18 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package testedespesas;
 
-/**
- *
- * @author MNLyle
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class DesRepositorio {
+   
+    private List <Despesa> listaDespesas = new ArrayList<>();
     
+    public DesRepositorio(){
+    }
+    
+    public boolean gravar (Despesa d){
+        return listaDespesas.add(d);
+//        return false;
+    }
 }

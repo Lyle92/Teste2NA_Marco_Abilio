@@ -6,8 +6,8 @@ class RegDespController {
     public RegDespController(){ 
     }
     
-    public void novaDespesa(float valor, String descricao){
-        new Despesa(valor,descricao);
+    public boolean novaDespesa(float valor, String descricao){
+        return new DesRepositorio().gravar(new Despesa(valor,descricao));
     }
     
 }
